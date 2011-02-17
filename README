@@ -1,0 +1,8 @@
+This is an app for Molly (http://mollyproject.org/) which was used to
+demonstrate how to create a sample Molly app at Dev8D 2011
+
+It provides a "transit line status" app on the Molly homepage, with two
+providers to demonstrate the separation between providers and views.
+
+It can display the London Underground line status (from TfL) and the status
+of the Subway lines (from SPT).

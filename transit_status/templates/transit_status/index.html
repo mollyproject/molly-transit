@@ -1,0 +1,29 @@
+{% extends "transit_status/base.html" %}
+
+{% block content %}
+    
+    <div class="section">
+        <div class="header">
+            <h2>{{ title }}</h2>
+        </div>
+        <table class="content">
+            <thead>
+                <tr>
+                    <th>Line</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for status in statuses %}
+                <tr>
+                    <td>{{ status.line_name }}</td>
+                    <td>{{ status.status }}
+                    {% if status.disruption_reason %}<br/>{{ status.disruption_reason }}{% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+{% endblock %}

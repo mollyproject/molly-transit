@@ -6,3 +6,12 @@ providers to demonstrate the separation between providers and views.
 
 It can display the London Underground line status (from TfL) and the status
 of the Subway lines (from SPT).
+
+Adding to Molly
+---------------
+
+To add this app to a Molly install, you need to add it to the APPLICATIONS
+setting:
+
+    Application('transit_status', 'transit_status', 'Tube Status',
+        provider=Provider('transit_status.providers.TubeStatusProvider')),
